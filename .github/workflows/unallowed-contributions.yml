@@ -37,9 +37,9 @@ jobs:
         if: ${{ steps.filter.outputs.notAllowed || steps.filter.outputs.contentTypes}}
         run: src/workflows/unallowed-contributions.js
         env:
-          ORGANIZATION: 'github'
+          ORGANIZATION: 'rachmari'
           REPO: ${{ github.repository }}
           PR_NUMBER: ${{ github.event.number }}
           FILE_PATHS_NOT_ALLOWED: ${{ steps.filter.outputs.notAllowed_files }}
           FILE_PATHS_CONTENT_TYPES: ${{ steps.filter.outputs.contentTypes_files }}
-          GITHUB_TOKEN: ${{ secrets.PAT }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
