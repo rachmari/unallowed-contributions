@@ -67,5 +67,5 @@ jobs:
           )
           if ! $has_reviewer
           then
-            gh pr edit $PR --add-reviewer github/codertocat
+            gh pr edit $PR --add-reviewer codertocat
           fi
