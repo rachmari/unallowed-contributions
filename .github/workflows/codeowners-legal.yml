@@ -22,9 +22,7 @@ permissions:
 jobs:
   codeowners-legal:
     if: >-
-      ${{ github.repository == 'github/docs-internal' &&
-          !github.event.pull_request.draft &&
-          github.event.pull_request.head.ref != 'repo-sync' }}
+      ${{ !github.event.pull_request.draft }}
     runs-on: ubuntu-latest
     steps:
       - name: Get files changed
@@ -69,5 +67,5 @@ jobs:
           )
           if ! $has_reviewer
           then
-            gh pr edit $PR --add-reviewer github/legal-product
+            gh pr edit $PR --add-reviewer github/codertocat
           fi
