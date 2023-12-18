@@ -11,5 +11,9 @@
     "#src/*": {
       "default": "./src/*"
     }
+  },
+  "scripts": {
+    "check-content-type": "node src/workflows/check-content-type.js",
+    "unallowed-contributions": "node src/workflows/unallowed-contributions.js"
   }
 }
