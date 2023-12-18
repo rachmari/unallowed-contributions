@@ -37,7 +37,7 @@ jobs:
       # explaining this to the PR author
       - name: "Comment about changes we can't accept"
         if: ${{ steps.filter.outputs.notAllowed || steps.filter.outputs.contentTypes}}
-        run: src/workflows/unallowed-contributions.js
+        run: npm run unallowed-contributions
         env:
           REPO_OWNER_AND_NAME: ${{ github.repository }}
           PR_NUMBER: ${{ github.event.number }}
