@@ -57,7 +57,7 @@ jobs:
           echo ${{ steps.checkContentType.outputs.contentType }}
 
       - name: Add Legal team as a reviewer
-        if: ${{ steps.checkContentType.outputs.contentType == true }}
+        if: steps.checkContentType.outputs.contentType
         env:
           # The GH CLI uses a slightly different env name for
           # the token than the GITHUB_TOKEN used by actions
