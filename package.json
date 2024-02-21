@@ -4,9 +4,10 @@
     "@octokit/rest": "^20.0.2",
     "dotenv": "^16.3.1",
     "gray-matter": "^4.0.3",
-    "js-yaml": "^4.1.0"
+    "js-yaml": "^4.1.0",
+    "lodash": "^4.17.21"
   },
-  "type":"module",
+  "type": "module",
   "imports": {
     "#src/*": {
       "default": "./src/*"
