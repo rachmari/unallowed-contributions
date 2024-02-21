@@ -3,7 +3,7 @@
 import coreLib from '@actions/core'
 import { readFileSync } from 'fs'
 import yaml from 'js-yaml'
-import { difference } from 'lodash'
+import { difference } from 'lodash-es'
 
 import { checkContentType } from '#src/workflows/fm-utils.js'
 import github from '#src/workflows/github.js'
