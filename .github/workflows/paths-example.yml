@@ -8,8 +8,8 @@ on:
   # Needed in lieu of `pull_request` so that PRs from a fork can be notified of unallowed changes.
   pull_request_target:
     paths:
-      - 'content/**'
       - '!src/**'
+      - 'content/**'
 
 permissions:
   contents: read
