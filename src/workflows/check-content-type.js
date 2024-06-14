@@ -8,6 +8,7 @@ const { FILE_PATHS_CONTENT_TYPES, CONTENT_TYPE } = process.env
 
 main()
 
+// main
 async function main() {
   const filePaths = JSON.parse(FILE_PATHS_CONTENT_TYPES)
   const containsRai = checkContentType(filePaths, CONTENT_TYPE)
